@@ -1,9 +1,16 @@
-<ion-tabs  (ionTabsDidChange)="changeSelected($event)">
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button style='width: 20%!important' tab="home">
-      <img style=" height: 24px;width: 24px;;" src="assets/icon/HOME.png" *ngIf="selecionado!=='home'">
-      <img style=" height: 24px;width: 24px;" src="assets/icon/HOME_LARANJA.png" *ngIf="selecionado=='home'">
-      <ion-text [ngClass]="{'blackText':selecionado !== 'home', 'orangeText':selecionado === 'home'}">Home</ion-text>
+<ion-tabs>
+  <ion-tab-bar color="tertiary" slot="bottom">
+    <ion-tab-button >
+      <ion-icon name="stats"></ion-icon>
+      <ion-label>Faltas</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-icon name="time"></ion-icon>
+      <ion-label>Horários</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
