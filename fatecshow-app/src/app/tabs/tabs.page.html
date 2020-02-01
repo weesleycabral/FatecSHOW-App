@@ -1,0 +1,9 @@
+<ion-tabs  (ionTabsDidChange)="changeSelected($event)">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button style='width: 20%!important' tab="home">
+      <img style=" height: 24px;width: 24px;;" src="assets/icon/HOME.png" *ngIf="selecionado!=='home'">
+      <img style=" height: 24px;width: 24px;" src="assets/icon/HOME_LARANJA.png" *ngIf="selecionado=='home'">
+      <ion-text [ngClass]="{'blackText':selecionado !== 'home', 'orangeText':selecionado === 'home'}">Home</ion-text>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
