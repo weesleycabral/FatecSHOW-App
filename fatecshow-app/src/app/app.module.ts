@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginConfirmPageModule } from './modal/login-confirm/login-confirm.module';
 import { HomePageModule } from './home/home.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,8 @@ import { HomePageModule } from './home/home.module';
       AppRoutingModule,
       LottieAnimationViewModule,
       LoginConfirmPageModule,
-      HomePageModule
+      HomePageModule,
+      HttpClientModule
     ],
   providers: [
     StatusBar,

@@ -18,13 +18,13 @@
         </ion-row>
       </ion-col>
     <ion-item class="radius" style="margin-bottom: 5.5px; margin-top: 25px; background-color: white;">
-      <ion-input type="text" style="font-size: 20px;" formControlName="usuario" placeholder="Usuário SIGA (XXXXXXXXXSP)" required>
+      <ion-input type="text" style="font-size: 20px;" formControlName="login" placeholder="Usuário SIGA (XXXXXXXXXSP)" required>
       </ion-input>
     </ion-item>
     <div style="color: #f4f5f8!important; padding-bottom: 2px!important;">
-      <ion-text color="danger"  style=" padding-bottom: 10px!important;" *ngIf="loginForm.get('usuario').hasError('required') && loginForm.get('usuario').touched"
+      <ion-text color="danger"  style=" padding-bottom: 10px!important;" *ngIf="loginForm.get('login').hasError('required') && loginForm.get('login').touched"
     style="text-align: left!important" lines="none">
-    Informe um usuario válido.
+    Informe um login válido.
       </ion-text>
     </div>
 

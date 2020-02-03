@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as $ from 'jquery';
 import { ModalController } from '@ionic/angular';
 import { LoginConfirmPage } from '../modal/login-confirm/login-confirm.page';
+import { FatecService } from '../services/fatec.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +20,8 @@ export class LoginPage implements OnInit {
   constructor(
     private fb: FormBuilder,
     private modalController: ModalController,
+    private fatecService: FatecService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,7 +30,7 @@ export class LoginPage implements OnInit {
 
   validation() {
     this.loginForm = this.fb.group({
-      usuario: ['', Validators.required],
+      login: ['', Validators.required],
       senha: ['', Validators.required]
     });
   }
@@ -51,7 +55,15 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.presentModal();
+    if (this.loginForm.valid) {
+      const conta = Object.assign(this.loginForm.value);
+      this.fatecService.login(conta).subscribe((res) => {
+        this.presentModal();
+        this.router.navigate(['tabs/home']);
+      }, e => {
+        alert(e.error);
+      });
+    }
   }
 
   async presentModal() {
