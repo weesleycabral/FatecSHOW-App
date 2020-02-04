@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 let _myAccount;
+
 app.use(express.json());
 app.use(cors());
 
@@ -25,6 +26,22 @@ app.get("/perfil", (req, res) => {
     return res.send(perfil);
   }).catch(e => {
     return res.send(`${e}`);
+  })
+})
+
+app.get("/notas", (req, res) => {
+  _myAccount.getPartialGrades().then(notasParciais => {
+    return res.send(notasParciais);
+  }).catch(e => {
+    return res.send(`${e}`);
+  })
+})
+
+app.get("/disciplinas", (req, res) => {
+  _myAccount.getEnrolledDisciplines().then(disciplinas => {
+    return res.send(disciplinas);
+  }).catch(e => {
+    return res.send(`${e}`)
   })
 })
 

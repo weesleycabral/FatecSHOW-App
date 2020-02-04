@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import * as $ from 'jquery';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { LoginConfirmPage } from '../modal/login-confirm/login-confirm.page';
-import { FatecService } from '../services/fatec.service';
+import { FatecService } from 'src/app/services/fatec.service';
 import { Router } from '@angular/router';
+import { LoginConfirmPage } from '../../modal/login-confirm/login-confirm.page';
+declare var $: any;
 
 @Component({
   selector: 'app-login',

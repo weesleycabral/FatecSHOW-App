@@ -18,4 +18,12 @@ export class FatecService {
     return this.http.get(this.baseURL + 'perfil');
   }
 
+  getNotas() {
+    return this.http.get(this.baseURL + 'notas');
+  }
+
+  getDisciplinas() {
+    return this.http.get(this.baseURL + 'disciplinas');
+  }
+
 }

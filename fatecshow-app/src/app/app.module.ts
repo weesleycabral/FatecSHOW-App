@@ -9,8 +9,8 @@ import { LottieAnimationViewModule } from 'ng-lottie';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginConfirmPageModule } from './modal/login-confirm/login-confirm.module';
-import { HomePageModule } from './home/home.module';
+import { LoginConfirmPageModule } from './pages/modal/login-confirm/login-confirm.module';
+import { HomePageModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
