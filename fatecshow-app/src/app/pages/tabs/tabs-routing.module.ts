@@ -17,6 +17,16 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'horarios',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+            import('../horarios/horarios.module').then(m => m.HorariosPageModule)
+          }
+        ]
+      }
     ]
   },
   {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ModalController } from '@ionic/angular';
+import { ModalController, MenuController } from '@ionic/angular';
 import { FatecService } from 'src/app/services/fatec.service';
 import { Router } from '@angular/router';
 import { LoginConfirmPage } from '../../modal/login-confirm/login-confirm.page';
@@ -21,11 +21,16 @@ export class LoginPage implements OnInit {
     private fb: FormBuilder,
     private modalController: ModalController,
     private fatecService: FatecService,
-    private router: Router
+    private router: Router,
+    private menu: MenuController
   ) { }
 
   ngOnInit() {
     this.validation();
+  }
+
+  ionViewDidEnter() {
+    this.menu.enable(false);
   }
 
   validation() {

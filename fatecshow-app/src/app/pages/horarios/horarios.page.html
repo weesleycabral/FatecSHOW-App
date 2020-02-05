@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-toolbar" style="padding-top: 10px;">
+      <ion-back-button color="primary" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; margin-right: 20px!important; color: white; margin-top: 10px;">Horários
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <lottie-animation-view [options]="lottieConfig" [width]="150" [height]="150" ></lottie-animation-view>
+  <ion-item style="border-radius: 10px; font-size: 20px;" color="primary" (click)="presentModal(0)">
+    SEGUNDA-FEIRA <ion-icon slot="end" mode="ios" name="arrow-forward"></ion-icon>
+  </ion-item>
+  <br>
+  <ion-item style="border-radius: 10px; font-size: 20px;" color="primary" (click)="presentModal(1)">
+    TERÇA-FEIRA <ion-icon slot="end" mode="ios" name="arrow-forward"></ion-icon>
+  </ion-item>
+  <br>
+  <ion-item style="border-radius: 10px; font-size: 20px;" color="primary" (click)="presentModal(2)">
+    QUARTA-FEIRA <ion-icon slot="end" mode="ios" name="arrow-forward"></ion-icon>
+  </ion-item>
+  <br>
+  <ion-item style="border-radius: 10px; font-size: 20px;" color="primary" (click)="presentModal(3)">
+    QUINTA-FEIRA <ion-icon slot="end" mode="ios" name="arrow-forward"></ion-icon>
+  </ion-item>
+  <br>
+  <ion-item style="border-radius: 10px; font-size: 20px;" color="primary" (click)="presentModal(4)">
+    SEXTA-FEIRA <ion-icon slot="end" mode="ios" name="arrow-forward"></ion-icon>
+  </ion-item>
+  <br>
+  <ion-item style="border-radius: 10px; font-size: 20px;" color="primary" (click)="presentModal(5)">
+    SÁBADO <ion-icon slot="end" mode="ios" name="arrow-forward"></ion-icon>
+  </ion-item>
+</ion-content>

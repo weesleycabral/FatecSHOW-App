@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginConfirmPageModule } from './pages/modal/login-confirm/login-confirm.module';
 import { HomePageModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HorariosPageModule } from './pages/horarios/horarios.module';
+import { MateriasPageModule } from './pages/modal/materias/materias.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
       LottieAnimationViewModule,
       LoginConfirmPageModule,
       HomePageModule,
+      HorariosPageModule,
+      MateriasPageModule,
       HttpClientModule
     ],
   providers: [

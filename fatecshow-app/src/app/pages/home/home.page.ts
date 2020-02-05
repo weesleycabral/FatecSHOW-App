@@ -13,6 +13,7 @@ export class HomePage {
   usuario: User;
   notas: Notas;
   disciplinas: Disciplinas;
+  horarios: any;
 
   constructor(
     private fatecService: FatecService
@@ -28,7 +29,7 @@ export class HomePage {
     });
     this.fatecService.getDisciplinas().subscribe((res: Disciplinas) => {
       this.disciplinas = res;
-    });
+    }); 
   }
 
 }

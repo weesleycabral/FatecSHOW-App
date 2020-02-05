@@ -45,6 +45,14 @@ app.get("/disciplinas", (req, res) => {
   })
 })
 
+app.get("/horarios", (req, res) => {
+  _myAccount.getSchedules().then(horarios => {
+    return res.send(horarios);
+  }).catch(e => {
+    return res.send(`${e}`);
+  })
+})
+
 app.listen(17200);
 
 

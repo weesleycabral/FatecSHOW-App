@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title  style="text-align: center; margin-right: 20px!important; color: white; margin-top: 10px;">Matérias</ion-title>
+    <ion-icon style="font-size: 30px;" color="danger" slot="end" name="close" (click)="modalController.dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let t of teste"> 
+          <strong>{{t.nome}}</strong> 
+    <ion-col size="6">
+      <ion-row>
+        <ion-icon style="font-size: 20px;" color="primary" name="time"></ion-icon>&nbsp; <strong>{{t.startAt }}</strong> hrs as&nbsp;
+    <strong>{{t.endAt }}</strong>  hrs   
+      </ion-row>
+      <div class="linha"></div>
+    </ion-col>
+  </div>
+</ion-content>
