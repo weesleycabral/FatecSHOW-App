@@ -29,7 +29,7 @@ export class HomePage {
     });
     this.fatecService.getDisciplinas().subscribe((res: Disciplinas) => {
       this.disciplinas = res;
-    }); 
+    });
   }
 
 }

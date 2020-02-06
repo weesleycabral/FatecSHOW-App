@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform, AlertController } from '@ionic/angular';
+import { Platform, AlertController, ToastController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
@@ -26,7 +26,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private alertController: AlertController,
-    private router: Router
+    private router: Router,
+    private toastController: ToastController
   ) {
     this.initializeApp();
   }
@@ -62,5 +63,16 @@ export class AppComponent {
 
   logout() {
     this.router.navigate(['/login']);
+    this.presentToast('Desconectado com sucesso! Volte sempre! :D', 'success');
+  }
+
+  async presentToast(m: string, c: string) {
+    const toast = await this.toastController.create({
+      message: `${m}`,
+      color: `${c}`,
+      duration: 2000,
+      position: 'top'
+    });
+    toast.present();
   }
 }

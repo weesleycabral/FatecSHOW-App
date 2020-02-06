@@ -7,13 +7,19 @@
 
 <ion-content>
   <div *ngFor="let t of teste"> 
-          <strong>{{t.nome}}</strong> 
-    <ion-col size="6">
-      <ion-row>
+    <ul class="list-group ">
+      <li class="list-group-item"><strong>{{t.nome}}</strong> <br> 
         <ion-icon style="font-size: 20px;" color="primary" name="time"></ion-icon>&nbsp; <strong>{{t.startAt }}</strong> hrs as&nbsp;
-    <strong>{{t.endAt }}</strong>  hrs   
-      </ion-row>
-      <div class="linha"></div>
-    </ion-col>
+        <strong>{{t.endAt }}</strong>  hrs </li>
+      <!-- <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li> -->
+    </ul>        
+    <!-- <ion-col size="6">
+      <ion-row>
+           
+      </ion-row> -->
+      <!-- <div class="linha"></div>
+    </ion-col> -->
   </div>
 </ion-content>
