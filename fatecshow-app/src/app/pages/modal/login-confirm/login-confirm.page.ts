@@ -16,7 +16,7 @@ export class LoginConfirmPage implements OnInit {
     LottieAnimationViewModule.forRoot();
 
     this.lottieConfig =  {
-      path: 'assets/animations/yes.json',
+      path: 'assets/animations/wait.json',
       autoplay: true,
       loop: false
     };
