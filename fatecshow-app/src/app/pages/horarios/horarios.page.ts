@@ -21,7 +21,7 @@ horarios: Horarios;
     LottieAnimationViewModule.forRoot();
 
     this.lottieConfig = {
-      path: 'assets/animations/calendar2.json',
+      path: 'assets/animations/calendar.json',
       autoplay: true,
       loop: true,
     };
