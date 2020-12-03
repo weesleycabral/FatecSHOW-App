@@ -4,8 +4,9 @@ const express = require('express');
 const app = express();
 let _myAccount;
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+
 
 app.post("/login", (req, res) => {
   const myAccount = new fatecApi.Account(req.body.login, req.body.senha);
@@ -19,6 +20,9 @@ app.post("/login", (req, res) => {
   }).catch(e => {
     return res.status(403).send(`Usuario ou senha invalido`);
   })
+  res.set('access-controll-allow-origin', '*')
+  res.set('access-controll-allow-methods', '*')
+  res.set('access-controll-allow-headers', '*')
 });
 
 app.get("/perfil", (req, res) => {

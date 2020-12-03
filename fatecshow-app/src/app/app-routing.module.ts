@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'materias',
     loadChildren: () => import('./pages/modal/materias/materias.module').then( m => m.MateriasPageModule)
   },
+  {
+    path: 'faltas',
+    loadChildren: () => import('./pages/faltas/faltas.module').then( m => m.FaltasPageModule)
+  }
+
 
 
 

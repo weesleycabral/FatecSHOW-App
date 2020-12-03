@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-toolbar" style="padding-top: 10px;">
+      <ion-back-button color="primary" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; margin-right: 20px!important; color: white; margin-top: 10px;">Faltas Parciais
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Matéria</th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        <th scope="col" slot="end">Faltas</th>
+      </tr>
+    </thead>
+  </table>
+<div *ngFor="let d of disciplinas">
+  <!-- <ion-item style="border-radius: 10px; font-size: 15px;" color="primary">
+   <strong>Matéria:</strong>  
+   <strong>Faltas:</strong> 
+  </ion-item>
+  <br> -->
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      {{ d.name }}
+      <span class="badge badge-primary badge-pill" style="font-size: 15px;"> {{ d.absenses }}</span>
+    </li>
+  </ul>
+  
+</div>
+</ion-content>

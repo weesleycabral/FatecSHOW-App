@@ -14,6 +14,7 @@ import { HomePageModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HorariosPageModule } from './pages/horarios/horarios.module';
 import { MateriasPageModule } from './pages/modal/materias/materias.module';
+import { FaltasPageModule } from './pages/faltas/faltas.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +28,8 @@ import { MateriasPageModule } from './pages/modal/materias/materias.module';
       HomePageModule,
       HorariosPageModule,
       MateriasPageModule,
-      HttpClientModule
+      HttpClientModule,
+      FaltasPageModule
     ],
   providers: [
     StatusBar,

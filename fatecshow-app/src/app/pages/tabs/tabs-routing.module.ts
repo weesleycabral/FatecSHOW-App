@@ -26,6 +26,16 @@ const routes: Routes = [
             import('../horarios/horarios.module').then(m => m.HorariosPageModule)
           }
         ]
+      },
+      {
+        path: 'faltas',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+            import('../faltas/faltas.module').then(m => m.FaltasPageModule)
+          }
+        ]
       }
     ]
   },
